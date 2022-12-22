@@ -13,9 +13,16 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/style.css" />
+    <style>
+      canvas {
+        position: absolute;
+      }
+    </style>
     <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
     <script src="/driver_webrtc.js" type="module"></script>
     <script src="/driver.js" type="module"></script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="face_detection.js"></script>
     <script>
       document.onkeydown = (e) => {
         e = e || window.event;

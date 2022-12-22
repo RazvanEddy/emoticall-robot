@@ -106,12 +106,16 @@ footer {
   width: 400px;
 }
 
-video {
+/* video {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-}
+} */
 
 #logs div {
   font-family: monospace;
   white-space: pre;
+}
+
+canvas {
+  position: absolute;
 }

@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.17.1",
+    "face-api.js": "^0.22.2",
     "ws": "^7.2.3"
   },
   "engines": {

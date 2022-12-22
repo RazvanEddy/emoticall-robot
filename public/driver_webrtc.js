@@ -99,7 +99,7 @@ export function DriverWebRTC(iceConfig, log, sendToServer, hangUpCall) {
   this.ontrack = (event) => {
     log("Track event");
     remoteVideo.srcObject = event.streams[0];
-    remoteVideo.controls = true;
+    remoteVideo.controls = false;
   };
   
 };
