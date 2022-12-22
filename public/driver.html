@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A cool thing made with Glitch" />
+    <script defer src="face-api.min.js"></script>
+    <script defer src="face_detection.js"></script>
     <link
       id="favicon"
       rel="icon"
@@ -13,16 +15,10 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/style.css" />
-    <style>
-      canvas {
-        position: absolute;
-      }
-    </style>
     <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
     <script src="/driver_webrtc.js" type="module"></script>
     <script src="/driver.js" type="module"></script>
-    <script defer src="face-api.min.js"></script>
-    <script defer src="face_detection.js"></script>
+    
     <script>
       document.onkeydown = (e) => {
         e = e || window.event;
@@ -134,7 +130,7 @@
           </ul>
         </span>
       </div>
-      <div class="remoteVideoDiv" style="max-height: 91.5vh">
+      <div id="remoteVideoId" class="remoteVideoDiv" style="max-height: 91.5vh">
         <video
           id="remoteVideo"
           autoplay

@@ -14,10 +14,9 @@ Promise.all([
 function addVideoListener(){
     video.addEventListener('playing', () => {
         const canvas = faceapi.createCanvasFromMedia(video);
-        document.body.append(canvas);
-        const displaySize = { width: video.videoWidth, height: video.videoHeight };
+        document.getElementById('remoteVideoId').appendChild(canvas);
+        const displaySize = { width: video.offsetWidth, height: video.offsetHeight };
         faceapi.matchDimensions(canvas, displaySize);
-        console.log(displaySize);
         setInterval(async () => {
             const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
             const resizedDetections = faceapi.resizeResults(detections, displaySize);
