@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A cool thing made with Glitch" />
-    <script defer src="face-api.min.js"></script>
-    <script defer src="face_detection.js"></script>
+    <!-- <script type="importmap">
+      {
+        "imports": {
+          "onnxruntime-web": "/node_modules/onnxruntime-web/lib/index.js"
+        }
+      }
+    </script> -->
+    <script defer src="face-api.min.js" type="module"></script>
+    <script defer src="face_detection.js" type="module"></script>
     <!-- <script type="text/javascript" src="https://unpkg.com/meyda@5.5.1/dist/web/meyda.min.js"></script> -->
     <script src="https://unpkg.com/meyda/dist/web/meyda.min.js"></script>
-    <script defer src="voice_emotions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script defer src="voice_emotions.js" type="module"></script>
     <link
       id="favicon"
       rel="icon"

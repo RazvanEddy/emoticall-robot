@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "face-api.js": "^0.22.2",
     "meyda": "^5.5.1",
+    "onnxruntime-web": "^1.13.1",
     "ws": "^7.2.3"
   },
   "engines": {
