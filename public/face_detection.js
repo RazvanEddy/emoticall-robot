@@ -4,8 +4,6 @@ const canvas = document.getElementById("canvas");
 const MODEL_URL = '/models/face';
 
 Promise.all([
-    // tinyfacedetector is just like a normal face detector but it's going to be smaller and quicker
-    // faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
     faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
     faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
     faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
