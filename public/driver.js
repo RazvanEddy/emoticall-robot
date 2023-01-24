@@ -185,6 +185,7 @@ window.endCall = () => {
   window.endLocalVideo();
   window.sendToServer({ type: "endCall" });
   webrtc = null;
+  window.location.reload();
 };
 
 // Log
