@@ -13,17 +13,13 @@ app.get("/robot", (request, response) => {
   response.sendFile(__dirname + "/public/robot.html");
 });
 
+const PORT = process.env.PORT || 3000;
+
 // Launch express server
 const server = createServer(app);
-server.listen(process.env.PORT, () => {
-  console.info(`Server running on port: ${process.env.PORT}`);
+server.listen(PORT, () => {
+  console.info(`Server running on port: ${PORT}`);
 });
-
-// Uncomment the following lines to run the server locally
-// const server = createServer(app);
-// server.listen("3000", () => {
-//   console.info(`Server running on port: 3000`);
-// });
 
 // Launch websocket server
 const webSocketServer = new WebSocket.Server({ server });
