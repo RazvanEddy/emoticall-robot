@@ -7,7 +7,7 @@ function onClickStartAnalyzer() {
         function startAnalyzer(){
             const AudioContext = window.AudioContext || window.webkitAudioContext;
             const audioContext = new AudioContext({ sampleRate: 22050 });
-            const voiceVideo = document.getElementById("localVideo");
+            const voiceVideo = document.getElementById("remoteVideo");
             const audioStream = voiceVideo.captureStream();
             const source = audioContext.createMediaStreamSource(audioStream);
             analyzer = Meyda.createMeydaAnalyzer({
