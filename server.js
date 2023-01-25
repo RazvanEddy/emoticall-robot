@@ -19,6 +19,12 @@ server.listen(process.env.PORT, () => {
   console.info(`Server running on port: ${process.env.PORT}`);
 });
 
+// Uncomment the following lines to run the server locally
+// const server = createServer(app);
+// server.listen("3000", () => {
+//   console.info(`Server running on port: 3000`);
+// });
+
 // Launch websocket server
 const webSocketServer = new WebSocket.Server({ server });
 webSocketServer.on("connection", socket => {

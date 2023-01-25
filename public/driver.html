@@ -64,11 +64,11 @@
         } else if (e.keyCode === 77) {
           console.log("m pressed");
           // Enable speakers
-          sendToServer({ type: "speakerEnable" });
+          sendToServer({ type: "speakerDisable" });
         } else if (e.keyCode === 78) {
           console.log("n pressed");
           // Disable speakers
-          sendToServer({ type: "speakerDisable" });
+          sendToServer({ type: "speakerEnable" });
         }
       };
     </script>
@@ -127,6 +127,8 @@
             <li>Button "3" - Pole Stop</li>
             <li>Button "4" - Stand Deploy</li>
             <li>Button "5" - Stand Retract</li>
+            <li>Button "M" - Disable Speaker</li>
+            <li>Button "N" - Enable Speaker</li>
           </ul>
         </span>
       </div>
