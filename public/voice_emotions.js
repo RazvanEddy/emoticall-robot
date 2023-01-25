@@ -30,4 +30,3 @@ function stopAnalyzer(){
     analyzer.stop();
     analyzer = null;
 }
-
