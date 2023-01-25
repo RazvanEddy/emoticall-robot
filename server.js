@@ -15,19 +15,19 @@ app.get("/robot", (request, response) => {
 
 // Launch express server
 const server = createServer(app);
-server.listen("3000", () => {
-  console.info(`Server running on port: 3000`);
+server.listen(process.env.PORT, () => {
+  console.info(`Server running on port: ${process.env.PORT}`);
 });
 
 // Launch websocket server
 const webSocketServer = new WebSocket.Server({ server });
-webSocketServer.on("connection", (socket) => {
+webSocketServer.on("connection", socket => {
   console.info("Total connected clients:", webSocketServer.clients.size);
   app.locals.clients = webSocketServer.clients;
 
   // Send all messages to all other clients
-  socket.on("message", (message) => {
-    webSocketServer.clients.forEach((client) => {
+  socket.on("message", message => {
+    webSocketServer.clients.forEach(client => {
       if (client != socket && client.readyState === WebSocket.OPEN) {
         client.send(message);
       }
@@ -36,12 +36,12 @@ webSocketServer.on("connection", (socket) => {
 
   // End call when any client disconnects
   socket.on("close", () => {
-    webSocketServer.clients.forEach((client) => {
+    webSocketServer.clients.forEach(client => {
       if (client != socket && client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify({ type: "endCall" }));
       }
     });
   });
-
+  
   socket.send("Hello from server");
 });
